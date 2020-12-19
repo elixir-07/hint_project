@@ -6,6 +6,7 @@ import 'package:hint_project/main.dart';
 import 'package:hint_project/StartPage.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:hint_project/AddVisitor.dart';
+import 'package:hint_project/dashBoard.dart';
 
 import 'ScanPage.dart';
 class VisitorPage extends StatefulWidget {
@@ -74,13 +75,26 @@ class _VisitorPageState extends State<VisitorPage> {
               SizedBox(
                 height: 20,
               ),
+              
+              FlatButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return DashBoard();
+                    }));
+                  },
+                  child: BlackContainer(
+                    text: 'Show Visitor',
+                    width: 260,
+                    colour: Color(0xff131A22),
+                  ))
              
              
-              BlackContainer(
+             /* BlackContainer(
                 text: 'Show Visitor',
                 width: 260,
                 colour: Color(0xff131A22),
-              )
+              )*/
             ],
           ),
         ),
